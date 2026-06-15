@@ -1,0 +1,16 @@
+global:
+
+route:
+  receiver: email-alert
+
+receivers:
+
+- name: email-alert
+
+  email_configs:
+  - to: '${SMTP_TO}'
+    from: '${SMTP_FROM}'
+    smarthost: 'smtp.gmail.com:587'
+    auth_username: '${SMTP_USERNAME}'
+    auth_identity: '${SMTP_USERNAME}'
+    auth_password: '${SMTP_PASSWORD}'
